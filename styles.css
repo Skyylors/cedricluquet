@@ -1,0 +1,235 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+
+.card-container {
+    background: linear-gradient(135deg, #ffffff, #f7f7f7);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    text-align: center;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.card-container:hover {
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+}
+
+.card-container:before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #1abc9c, #e74c3c);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.card-container:after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+
+.logo img {
+    width: 180px; 
+    margin-bottom: 20px;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-container:hover .logo img {
+    transform: scale(1.1);
+}
+
+.card-info h2 {
+    font-size: 28px;
+    color: #34495e;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.job-title {
+    font-size: 18px;
+    color: #16a085;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.company-address {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.company-address i {
+    margin-right: 10px;
+}
+
+
+.contact-section {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 16px;
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 10px 0;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.contact-item i {
+    font-size: 20px;
+    
+    margin-right: 10px;
+    color: #3498db;
+}
+.contact-item a {
+    color: #34495e;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+
+
+.contact-item a:hover {
+    color: #2ecc71; 
+}
+
+
+.contact-item:hover {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding-left: 20px;
+    color: #2980b9;
+}
+
+.contact-item:hover i {
+    color: #1abc9c;
+}
+
+.btn-vcard {
+    margin-top: 20px;
+    padding: 14px 40px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-vcard:hover {
+    background-color: #c0392b;
+    transform: translateY(-5px);
+}
+
+.btn-vcard i {
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        padding: 30px;
+    }
+
+    .logo img {
+        width: 140px; 
+    }
+
+    .card-info h2 {
+        font-size: 22px;
+    }
+
+    .job-title {
+        font-size: 16px;
+    }
+
+    .company-address {
+        font-size: 14px;
+    }
+
+    .contact-item {
+        font-size: 14px;
+    }
+
+    .contact-item i {
+        font-size: 18px;
+    }
+
+    .btn-vcard {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        padding: 20px;
+    }
+
+    .logo img {
+        width: 120px; 
+    }
+
+    .card-info h2 {
+        font-size: 20px;
+    }
+
+    .job-title {
+        font-size: 14px;
+    }
+
+    .company-address {
+        font-size: 12px;
+    }
+
+    .contact-item {
+        font-size: 12px;
+    }
+
+    .contact-item i {
+        font-size: 16px;
+    }
+
+    .btn-vcard {
+        padding: 10px 25px;
+        font-size: 12px;
+    }
+}
